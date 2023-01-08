@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="MavenPackageUpdate" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="excludeList">
+        <list>
+          <option value="org.seleniumhq.selenium:selenium-java" />
+          <option value="io.github.bonigarcia:webdrivermanager" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SwitchStatementsWithoutDefault" enabled="false" level="INFORMATION" enabled_by_default="false">
+      <option name="m_ignoreFullyCoveredEnums" value="true" />
+    </inspection_tool>
+  </profile>
+</component>
