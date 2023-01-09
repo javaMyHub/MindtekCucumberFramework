@@ -32,7 +32,7 @@ public class ExcelUtils {
         try {
             input = new FileInputStream(path);
             workbook = new XSSFWorkbook(input);
-            sheet = workbook.getSheet(sheetName);
+            sheet = (Sheet) workbook.getSheet(sheetName);
         } catch (FileNotFoundException e) {
             System.out.println("Excel spreadsheet path is invalid "+path);
         } catch (IOException e) {
@@ -49,7 +49,8 @@ public class ExcelUtils {
 
         if(sheet.getPhysicalNumberOfRows()<=rowNum){
             sheet.createRow(rowNum).createCell(cellNum).setCellValue(value);
-        }else if (sheet.getRow(rowNum).getPhysicalNumberOfCells()<=cellNum){
+        }
+        else if (sheet.getRow(rowNum).getPhysicalNumberOfCells()<=cellNum){
             sheet.getRow(rowNum).createCell(cellNum).setCellValue(value);
         }else{
             sheet.getRow(rowNum).getCell(cellNum).setCellValue(value);
