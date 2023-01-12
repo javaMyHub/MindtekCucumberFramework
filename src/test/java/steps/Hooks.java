@@ -31,6 +31,9 @@ public class Hooks {
             case "RedShelfApp":
                 driver.get(ConfigReader.getProperty("RedShelfUrl"));
                 break;
+            case "GuruApp":
+                driver.get(ConfigReader.getProperty("GuruAppUrl"));
+                break;
         }
     }
 
