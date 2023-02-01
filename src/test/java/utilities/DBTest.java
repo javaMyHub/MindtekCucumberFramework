@@ -24,6 +24,6 @@ public class DBTest {
        // List<Map<String,Object>> list = db.getTableForQuery(q);
        // System.out.println(list);
 
-        db.close();
+        db.close(); // this is to close connection with dataBase
     }
 }
